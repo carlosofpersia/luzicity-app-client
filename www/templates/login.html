@@ -1,0 +1,31 @@
+<ion-view view-title="Login" align-title="left">
+
+    <ion-content style="background: url(public/img/login.jpg) center; background-size: cover;">
+        <div class="hero flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Thronester</h1>
+            </div>
+        </div>
+
+        <div class="list">
+            <ion-md-input ng-model="data.username" placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
+            <ion-md-input ng-model="data.password" placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
+        </div>
+        <div class="padding text-right">
+            <button class="button button-block button-stable icon-left ion-play" ng-click="app_login_local()">Login</button>
+            
+            <button ui-sref="app.authGoogle" class="button button-assertive icon-left ion-social-googleplus">Google+</button>
+        </div>
+        <div class="padding text-right">
+            <div id="status"></div>            
+            <fb:login-button scope="public_profile,email" 
+                             onlogin="checkLoginState();" 
+                             data-size="xlarge"
+                             data-show-faces="false" 
+                             data-auto-logout-link="true">
+                Facebook
+            </fb:login-button>
+        </div>
+    </ion-content>
+</ion-view>
