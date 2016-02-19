@@ -1,31 +1,52 @@
 <ion-view view-title="Login" align-title="left">
+<!--public/img/login.jpg-->
+    <ion-content style="background: url('public/img/material-graphite.jpg') center; background-size: cover; background-color: #656565;">
 
-    <ion-content style="background: url(public/img/login.jpg) center; background-size: cover;">
+        <div class="padding">
+            <div id="status"></div>
+            <div class="button-bar">
+                <button class="button button-positive icon-left ion-social-facebook" 
+                        onclick="facebookLogin(); return false;">
+                    FACEBOOK
+                </button>
+                <button ui-sref="app.authGoogle" 
+                        class="button button-assertive icon-left ion-social-googleplus">
+                    Google+
+                </button>
+            </div>
+        </div>
+        
         <div class="hero flat">
             <div class="content">
                 <div class="app-icon"></div>
-                <h1>Thronester</h1>
+                <h1>Entrar</h1>
             </div>
         </div>
 
         <div class="list">
-            <ion-md-input ng-model="data.username" placeholder="Username" highlight-color="balanced" type="text"></ion-md-input>
-            <ion-md-input ng-model="data.password" placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
-        </div>
-        <div class="padding text-right">
-            <button class="button button-block button-stable icon-left ion-play" ng-click="app_login_local()">Login</button>
-            
-            <button ui-sref="app.authGoogle" class="button button-assertive icon-left ion-social-googleplus">Google+</button>
-        </div>
-        <div class="padding text-right">
-            <div id="status"></div>            
-            <fb:login-button scope="public_profile,email" 
-                             onlogin="checkLoginState();" 
-                             data-size="xlarge"
-                             data-show-faces="false" 
-                             data-auto-logout-link="true">
-                Facebook
-            </fb:login-button>
+            <label class="item item-input">
+                <input ng-model="data.username" 
+                       class='btnLogin' 
+                       placeholder="Username" 
+                       highlight-color="balanced" 
+                       type="text" />
+            </label>
+            <label class="item item-input">
+                <input ng-model="data.password" 
+                       class='btnLogin' 
+                       placeholder="Password" 
+                       highlight-color="energized" 
+                       type="password"/>
+            </label>
+            <div class="padding">
+                <button class="button button-block button-dark icon-left ion-play" 
+                        ng-click="app_login_local()">
+                    Login
+                </button>
+                <div class="lostPassword">
+                    <a href="#lostPassword">Esqueceu sua senha?</a>
+                </div>
+            </div>
         </div>
     </ion-content>
 </ion-view>

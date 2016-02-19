@@ -65,15 +65,46 @@ p {
 ==================================*/
 .app-icon {
     background-color: #fff;
-    background: url('../img/crown.jpg') center;
+    background: url('../img/logo-luzicity.png') center;
     background-size: cover;
     border-radius: 50%;
     height: 125px;
     margin: 0 auto;
-    width: 125px;
+    width: 25%;
 }
 
 .social-login {
     position: fixed;
     bottom: 0;
+}
+
+input.btnLogin {
+    padding: 16px;
+    border-radius:7px;
+    border:0px;
+    background: rgba(255,255,255,.2);
+    display: block;
+    margin-right: 1em;
+    width: 100%;
+    color:#eee;
+    font-size:18px;
+    height: 54px;
+}
+
+input:focus.btnLogin  {
+    outline-color: rgba(0,0,0,0);
+    background: rgba(255,255,255,.50);
+    color: #e8e8e8;
+}
+
+.lostPassword {
+    text-align: center;
+    font-size: 1em;
+}
+
+.lostPassword a {
+    color: #e8e8e8;
+}
+.lostPassword a:hover {
+    color: #c8c8c8;
 }

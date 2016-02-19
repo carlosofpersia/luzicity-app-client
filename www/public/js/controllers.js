@@ -89,7 +89,6 @@ angular.module('starter.controllers', [])
 
 .controller('AuthGoogleCtrl', function($scope, $http) {
     console.log('AuthGoogle');
-
     window.location.href = 'http://luzicity.com.br:3000/auth/google';
 })
 

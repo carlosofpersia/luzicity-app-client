@@ -1,3 +1,27 @@
+
+
+
+function facebookLogin() {
+    FB.getLoginStatus(function (response) {
+        if (response.status == 'connected') {
+            console.log('connected');
+            testAPI();
+        } else {
+            if (response.session) {
+                $('#fb_login_form').submit();
+            } else {
+                FB.login(function (response) {
+                    if (response.session) {
+                        $('#fb_login_form').submit();
+                    } else {
+                    }
+                });
+            }
+        }
+    });
+}
+
+
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -24,7 +48,7 @@ function statusChangeCallback(response) {
 // code below.
 function checkLoginState() {
     console.log('checkLoginState - na hora do logout ele checa');
-    
+
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
     });
