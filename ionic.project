@@ -1,0 +1,10 @@
+{
+	"name": "sample",
+	"app_id": "6bd3e950",
+  	"proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
+  ]
+}

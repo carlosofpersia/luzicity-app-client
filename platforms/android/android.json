@@ -1,0 +1,196 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"GoogleMaps\"><param name=\"android-package\" value=\"plugin.google.maps.GoogleMaps\" /><param name=\"onload\" value=\"true\" /><param name=\"onreset\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"External\"><param name=\"android-package\" value=\"plugin.google.maps.External\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geocoder\"><param name=\"android-package\" value=\"plugin.google.maps.MyGeocoder\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Battery\"><param name=\"android-package\" value=\"org.apache.cordova.batterystatus.BatteryListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.geo.API_KEY\" android:value=\"AIzaSyB3g4lbtmdMC0-3ZR6VRHpJssXTu_Prgi4\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.google.android.providers.gsf.permission.READ_GSERVICES\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:glEsVersion=\"0x00020000\" android:required=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.location\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyB3g4lbtmdMC0-3ZR6VRHpJssXTu_Prgi4",
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js",
+            "id": "cordova-plugin-googlemaps.cordova-plugin-googlemaps",
+            "clobbers": [
+                "cordova-plugin-googlemaps"
+            ]
+        },
+        {
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "id": "ionic-plugin-keyboard.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-battery-status/www/battery.js",
+            "id": "cordova-plugin-battery-status.battery",
+            "clobbers": [
+                "navigator.battery"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+            "id": "cordova-plugin-camera.Camera",
+            "clobbers": [
+                "Camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+            "id": "cordova-plugin-camera.CameraPopoverOptions",
+            "clobbers": [
+                "CameraPopoverOptions"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/Camera.js",
+            "id": "cordova-plugin-camera.camera",
+            "clobbers": [
+                "navigator.camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+            "id": "cordova-plugin-camera.CameraPopoverHandle",
+            "clobbers": [
+                "CameraPopoverHandle"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+            "id": "cordova-plugin-geolocation.geolocation",
+            "clobbers": [
+                "navigator.geolocation"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+            "id": "cordova-plugin-geolocation.PositionError",
+            "runs": true
+        }
+    ]
+}
